@@ -1,1 +1,1 @@
-web: python server.py
+web: python D2-homework.py
