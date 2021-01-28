@@ -4,10 +4,9 @@ import sentry_sdk
 from sentry_sdk.integrations.bottle import BottleIntegration
 from bottle import route, run
 
-USER_DSN = "ваш DSN"
 # Привязка логирования sentry
 sentry_sdk.init(
-    dsn=f"{USER_DSN}",
+    dsn=os.environ.get("SENTRY_DSN"),
     integrations=[BottleIntegration()]
 )
 
